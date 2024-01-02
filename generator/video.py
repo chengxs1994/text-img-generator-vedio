@@ -16,6 +16,7 @@ def audio_to_video(text_input, pics_input):
     audio_length = audio.info.length
     fps = len(list_of_images) / audio_length
 
+    # 生成视频
     video = editor.ImageSequenceClip(pics_dir, fps=fps)
     audio = editor.AudioFileClip(audio_filepath)
     final_video = video.set_audio(audio)
